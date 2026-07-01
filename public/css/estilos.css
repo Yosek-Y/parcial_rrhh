@@ -592,3 +592,165 @@ body {
         border-bottom: none;
     }
 }
+
+.acciones-header {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-reporte {
+    width: 100%;
+    min-width: 1300px;
+    border-collapse: collapse;
+    background: #ffffff;
+    border: 1px solid var(--borde-suave);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.tabla-reporte th,
+.tabla-reporte td {
+    padding: 14px 15px;
+    border-bottom: 1px solid var(--borde-suave);
+    text-align: left;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+.tabla-reporte th {
+    background: #f8fafc;
+    color: var(--texto-principal);
+    font-weight: 800;
+}
+
+.tabla-reporte td {
+    color: var(--texto-secundario);
+}
+
+.tabla-reporte tr:hover td {
+    background: #f9fafb;
+}
+
+.tabla-reporte small {
+    color: var(--texto-muted);
+}
+
+.badge-integridad {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 7px 12px;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.badge-integridad.valido {
+    background: var(--verde-fondo);
+    color: var(--verde);
+    border: 1px solid rgba(5, 150, 105, 0.25);
+}
+
+.badge-integridad.corrupto {
+    background: var(--rojo-fondo);
+    color: var(--rojo);
+    border: 1px solid rgba(220, 38, 38, 0.25);
+}
+
+.fila-auditoria td {
+    background: #f8fafc;
+}
+
+.fila-auditoria code {
+    display: block;
+    margin-top: 8px;
+    background: #ffffff;
+    border: 1px solid var(--borde-suave);
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--texto-principal);
+    word-break: break-all;
+}
+
+.acciones-header {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-reporte {
+    width: 100%;
+    min-width: 1300px;
+    border-collapse: collapse;
+    background: #ffffff;
+    border: 1px solid var(--borde-suave);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.tabla-reporte th,
+.tabla-reporte td {
+    padding: 14px 15px;
+    border-bottom: 1px solid var(--borde-suave);
+    text-align: left;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+.tabla-reporte th {
+    background: #f8fafc;
+    color: var(--texto-principal);
+    font-weight: 800;
+}
+
+.tabla-reporte td {
+    color: var(--texto-secundario);
+}
+
+.badge-integridad {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 7px 12px;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.badge-integridad.valido {
+    background: var(--verde-fondo);
+    color: var(--verde);
+    border: 1px solid rgba(5, 150, 105, 0.25);
+}
+
+.badge-integridad.corrupto {
+    background: var(--rojo-fondo);
+    color: var(--rojo);
+    border: 1px solid rgba(220, 38, 38, 0.25);
+}
+
+.fila-auditoria td {
+    background: #f8fafc;
+}
+
+.fila-auditoria code {
+    display: block;
+    margin-top: 8px;
+    background: #ffffff;
+    border: 1px solid var(--borde-suave);
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--texto-principal);
+    word-break: break-all;
+}

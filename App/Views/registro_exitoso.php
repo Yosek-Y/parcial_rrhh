@@ -7,9 +7,15 @@
             <p>El colaborador y su perfil laboral fueron guardados con firma digital.</p>
         </div>
 
-        <a class="boton-secundario" href="index.php?accion=formulario">
-            Registrar otro
-        </a>
+        <div class="acciones-header">
+            <a class="boton-secundario" href="index.php?accion=formulario">
+                Registrar otro
+            </a>
+
+            <a class="boton-principal" href="index.php?accion=reporte">
+                Ver reporte
+            </a>
+        </div>
     </div>
 
     <div class="alerta-exito">
@@ -50,7 +56,7 @@
 
             <tr>
                 <th>Salario</th>
-                <td>B/. <?php echo htmlspecialchars(number_format($datos['salario'], 2), ENT_QUOTES, 'UTF-8'); ?></td>
+                <td>B/. <?php echo htmlspecialchars(number_format((float) $datos['salario'], 2), ENT_QUOTES, 'UTF-8'); ?></td>
             </tr>
 
             <tr>
@@ -75,8 +81,12 @@
     </table>
 
     <div class="acciones-formulario">
-        <a class="boton-principal" href="index.php?accion=formulario">
+        <a class="boton-secundario" href="index.php?accion=formulario">
             Registrar nuevo colaborador
+        </a>
+
+        <a class="boton-principal" href="index.php?accion=reporte">
+            Ver reporte
         </a>
     </div>
 </section>

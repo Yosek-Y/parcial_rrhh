@@ -34,7 +34,10 @@ $mostrarError = function (string $campo) use ($errores): void {
             <p>Complete los datos personales y laborales del colaborador.</p>
         </div>
 
-        <a class="boton-secundario" href="index.php?accion=inicio">Ver prueba del sistema</a>
+        <div class="acciones-header">
+            <a class="boton-secundario" href="index.php?accion=inicio">Ver prueba del sistema</a>
+            <a class="boton-principal" href="index.php?accion=reporte">Ver reporte</a>
+        </div>
     </div>
 
     <?php if (!empty($errores)): ?>
@@ -233,6 +236,7 @@ $mostrarError = function (string $campo) use ($errores): void {
                     <?php $mostrarError('celular'); ?>
                 </div>
             </div>
+        </div>
 
         <div class="seccion-formulario">
             <h3>Perfil laboral</h3>
@@ -324,12 +328,25 @@ $mostrarError = function (string $campo) use ($errores): void {
 
                     <div class="opciones-linea opciones-dos">
                         <label class="opcion-radio">
-                            <input type="radio" id="cargo_activo_si" name="cargo_activo" value="1" <?php echo $marcarRadio('cargo_activo', 1, true); ?> required>
+                            <input 
+                                type="radio" 
+                                id="cargo_activo_si" 
+                                name="cargo_activo" 
+                                value="1" 
+                                <?php echo $marcarRadio('cargo_activo', 1, true); ?> 
+                                required
+                            >
                             Sí
                         </label>
 
                         <label class="opcion-radio">
-                            <input type="radio" id="cargo_activo_no" name="cargo_activo" value="0" <?php echo $marcarRadio('cargo_activo', 0); ?>>
+                            <input 
+                                type="radio" 
+                                id="cargo_activo_no" 
+                                name="cargo_activo" 
+                                value="0" 
+                                <?php echo $marcarRadio('cargo_activo', 0); ?>
+                            >
                             No
                         </label>
                     </div>
@@ -342,12 +359,25 @@ $mostrarError = function (string $campo) use ($errores): void {
 
                     <div class="opciones-linea opciones-dos">
                         <label class="opcion-radio">
-                            <input type="radio" id="empleado_activo_si" name="empleado_activo" value="1" <?php echo $marcarRadio('empleado_activo', 1, true); ?> required>
+                            <input 
+                                type="radio" 
+                                id="empleado_activo_si" 
+                                name="empleado_activo" 
+                                value="1" 
+                                <?php echo $marcarRadio('empleado_activo', 1, true); ?> 
+                                required
+                            >
                             Sí
                         </label>
 
                         <label class="opcion-radio">
-                            <input type="radio" id="empleado_activo_no" name="empleado_activo" value="0" <?php echo $marcarRadio('empleado_activo', 0); ?>>
+                            <input 
+                                type="radio" 
+                                id="empleado_activo_no" 
+                                name="empleado_activo" 
+                                value="0" 
+                                <?php echo $marcarRadio('empleado_activo', 0); ?>
+                            >
                             No
                         </label>
                     </div>
@@ -378,7 +408,7 @@ $mostrarError = function (string $campo) use ($errores): void {
             <div class="aviso-openssl">
                 <strong>Auditoría OpenSSL:</strong>
                 <span>
-                    Más adelante se firmarán salario, código de empleado, tipo de empleado/planilla,
+                    Se firmarán salario, código de empleado, tipo de empleado/planilla,
                     ocupación y fecha de inicio.
                 </span>
             </div>

@@ -7,6 +7,12 @@ session_start();
 define('ROOT_PATH', __DIR__);
 define('APP_PATH', ROOT_PATH . DIRECTORY_SEPARATOR . 'App');
 
+$vendorAutoload = ROOT_PATH . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
+
+if (file_exists($vendorAutoload)) {
+    require_once $vendorAutoload;
+}
+
 spl_autoload_register(function (string $clase): void {
     $prefijo = 'App\\';
     $baseDirectorio = APP_PATH . DIRECTORY_SEPARATOR;
@@ -28,6 +34,8 @@ spl_autoload_register(function (string $clase): void {
 
 use App\Controllers\HomeController;
 use App\Controllers\ColaboradorController;
+use App\Controllers\ReporteController;
+use App\Controllers\ExportarController;
 
 $accion = $_GET['accion'] ?? 'formulario';
 
@@ -46,6 +54,16 @@ try {
         case 'guardar_colaborador':
             $controlador = new ColaboradorController();
             $controlador->guardarColaborador();
+            break;
+
+        case 'reporte':
+            $controlador = new ReporteController();
+            $controlador->mostrarReporte();
+            break;
+
+        case 'exportar_excel':
+            $controlador = new ExportarController();
+            $controlador->exportarExcel();
             break;
 
         default:

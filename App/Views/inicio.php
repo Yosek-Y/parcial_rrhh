@@ -97,16 +97,9 @@
     </div>
 </section>
 
-<section class="tarjeta acciones">
-    <h2>Estado de la corrección</h2>
+<a class="boton-principal" href="index.php?accion=formulario">
+    Ir al formulario de colaborador
+</a>
 
-    <p>
-        Esta pantalla ya usa la base de datos oficial parcial_3 y los catálogos entregados por la profesora.
-    </p>
-
-    <a class="boton-principal" href="index.php?accion=formulario">
-        Ir al formulario de colaborador
-    </a>
-</section>
 
 <?php require_once APP_PATH . '/Views/layouts/footer.php'; ?>
